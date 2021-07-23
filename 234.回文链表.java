@@ -18,7 +18,11 @@
 class Solution {
     public boolean isPalindrome(ListNode head) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (head == null) {
+=======
+        if(head == null) {
+>>>>>>> 1fa991af811163dd4afee1478cdd86d075daead0
 =======
         if(head == null) {
 >>>>>>> 1fa991af811163dd4afee1478cdd86d075daead0
@@ -27,7 +31,11 @@ class Solution {
         ListNode p = head;
         Stack<Integer> stack = new Stack<>();
 <<<<<<< HEAD
+<<<<<<< HEAD
         while (p != null) {
+=======
+        while(p != null) {
+>>>>>>> 1fa991af811163dd4afee1478cdd86d075daead0
 =======
         while(p != null) {
 >>>>>>> 1fa991af811163dd4afee1478cdd86d075daead0
@@ -36,8 +44,13 @@ class Solution {
         }
         p = head;
 <<<<<<< HEAD
+<<<<<<< HEAD
         while (p != null) {
             if (p.val == stack.peek()) {
+=======
+        while(p != null) {
+            if(p.val == stack.peek()) {
+>>>>>>> 1fa991af811163dd4afee1478cdd86d075daead0
 =======
         while(p != null) {
             if(p.val == stack.peek()) {
