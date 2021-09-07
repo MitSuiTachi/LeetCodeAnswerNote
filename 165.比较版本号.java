@@ -15,6 +15,7 @@ public class Solution {
         String[] s2 = version2.split("\\.");
         int index = 0;
         while (index < s1.length && index < s2.length) {
+            // Integer.valueOf(String s) 方法可以直接针对前导0做去除
             if (Integer.valueOf(s1[index]) > Integer.valueOf(s2[index])) {
                 return 1;
             } else if (Integer.valueOf(s1[index]) < Integer.valueOf(s2[index])) {
@@ -43,6 +44,14 @@ public class Solution {
         return 0;
     }
 }
+
+/**
+ * 下列方法没有通过全部测试case
+ * 解决思路是对两个版本号的修订号进行依次对比
+ * 只不过对比时采用charAt()方法取出修订号的每一位进行比较
+ * 这种方式在对比1.5和1.10这种时会出错
+ * 实际 1.5 < 1.10 如下方式会导致 1.5 > 1.10
+ */
 // class Solution {
 //     // 比较 version1 和 version2
 //     // version1 > version2 返回1
@@ -65,6 +74,8 @@ public class Solution {
 //         if (i == v1.length && i == v2.length) {
 //             return 0;
 //         }
+//         两个版本号长度不一致时需要继续往后比较
+//         需要考虑 1.1 和 1.1.0.0.0 其实是相等的情况
 //         if (i == v1.length) {
 //             while (i < v2.length) {
 //                 if (isRevisionZero(v2[i])) {
@@ -88,6 +99,8 @@ public class Solution {
 //     private int compareRevision(String revision1, String revision2) {
 //         int index1 = 0;
 //         int index2 = 0;
+//
+//         找到第一个不为0的修正号
 //         while (index1 < revision1.length() && revision1.charAt(index1) == '0') {
 //             index1++;
 //         }
