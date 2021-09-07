@@ -5,6 +5,11 @@
  */
 
 // @lc code=start
+/**
+ * 遍历到0 则将0后面的数字往前挪一位 并用currentZero记录当前0的数量
+ * 在挪的时候只需要挪动到 nums.length - currentZero 前即可
+ * 相比较后一种方法 可以减少挪动的次数
+ */
 class Solution {
     public void moveZeroes(int[] nums) {
         int currentZero = 0;
