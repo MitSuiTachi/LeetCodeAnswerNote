@@ -33,14 +33,16 @@ public class NumArray {
 }
 // class NumArray {
 //     private int[] mNums;
-
+//
 //     public NumArray(int[] nums) {
 //         mNums = new int[nums.length];
 //         for (int i = 0; i < nums.length; i++) {
 //             mNums[i] = nums[i];
 //         }
 //     }
-
+/**
+ * 头尾指针遍历 提高求和速度
+ */
 //     public int sumRange(int left, int right) {
 //         if (right > mNums.length) {
 //             return -1;
@@ -54,6 +56,9 @@ public class NumArray {
 //         if (left == right) {
 //             result = result + mNums[left];
 //         }
+/**
+ * 顺寻遍历
+ */
 // //        for (int i = left; i<=right;i++) {
 // //            result = result + mNums[i];
 // //        }
