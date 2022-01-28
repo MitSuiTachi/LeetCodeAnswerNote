@@ -22,6 +22,7 @@ class Solution {
         for (int i = 0; i < timePoints.size(); i++) {
             from24[i] = getMinFrom24(timePoints.get(i));
         }
+        // 排序
         Arrays.sort(from24);
         for (int i = 1; i < from24.length; i++) {
             min = Math.min(min, from24[i] - from24[i - 1]);
@@ -30,6 +31,9 @@ class Solution {
         return min;
     }
 
+    /**
+     * 计算字符串 s 所代表的时间点距离0点所过去的分钟数目
+     */
     private int getMinFrom24(String s) {
         String[] times = s.split(":");
         int hour = Integer.valueOf(times[0]);
